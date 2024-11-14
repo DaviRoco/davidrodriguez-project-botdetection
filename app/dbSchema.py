@@ -1,7 +1,6 @@
 from sqlalchemy import Column, BigInteger, TIMESTAMP, ForeignKey, Double
-from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+from .db_session import Base
 
 
 class UrlRatio(Base):
