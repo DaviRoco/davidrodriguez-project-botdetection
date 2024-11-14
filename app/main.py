@@ -22,9 +22,13 @@ def get_db():
         db.close()
 
 
-@app.post("/upload")
+@app.post("/upload/url-ratio")
 async def upload_file(file: UploadFile = File(...)):
     try:
-        return await csv_adapter.handle_uploaded_file(file)
+        result = await csv_adapter.handle_uploaded_file(file)
+        if result:
+            return "URL Ratio table loaded successfully"
+        else:
+            return "Exception occurred"
     except ValueError as e:
         return {"message": str(e)}
