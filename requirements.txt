@@ -1,3 +1,7 @@
-fastapi[standard]>=0.113.0,<0.114.0
-SQLAlchemy~=2.0.36
+alembic~=1.13.3
+fastapi~=0.112.2
+SQLAlchemy~=2.0.34
 psycopg2
+pandas~=2.2.2
+uvicorn~=0.30.6
+python-multipart~=0.0.17
